@@ -1,1 +1,1 @@
-<!-- Bootstrap Theme for Shanes Big League -->
+Bootstrap Theme for Shanes Big League
