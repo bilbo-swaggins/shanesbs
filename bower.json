@@ -1,0 +1,21 @@
+{
+  "name": "Shanes Bootstrap Theme",
+  "version": "1",
+  "homepage": "http://www.shanescards.com",
+  "authors": [
+    "Eric Willis <ewillis182@gmail.com"
+  ],
+  "license": "GNU",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "modernizer": "~2.8.2",
+    "font-awesome": "~4.2.0",
+    "bootstrap": "~3.3.1"
+  }
+}
