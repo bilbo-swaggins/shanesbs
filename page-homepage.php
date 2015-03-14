@@ -14,20 +14,44 @@ Template Name: Homepage
 							<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
 						<!-- Indicators -->
-								<ol class="carousel-indicators">
-									<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-									<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-									<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-								</ol>
 
 							<!-- Wrapper for slides -->
+
+							<!-- <?php if( get_field('photo_slider')) : ?>
+					<?php while( the_repeater_field('photo_slider')) :
+						$image = get_sub_field('slider_image');
+						$caption = get_sub_field('slider_caption');
+						$align = get_sub_field('caption_align');
+						$slide = wp_get_attachment_image_src( $image, $caption, 'photo_slider' );
+						$alt = get_post_meta( $image, '_wp_attachment_image_alt', true);
+						?>
+						<ul>
+						<li class="item">
+							<img src="<?php echo $slide[0]; ?>" alt="<?php echo $alt; ?>" />
+							<h3 class="banner-caption <?php if( $align == "top left" ) { echo 'top-left'; } elseif( $align == "top right" ) { echo 'top-right'; } elseif( $align == "bottom left" ) { echo 'bottom-left'; } else { echo 'bottom-right'; }; ?>"><?php echo $caption; ?></h3>
+						</li>
+						</ul>
+						<?php endwhile; ?>
+
+				<?php endif; ?> -->
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 							<div class="carousel-inner" role="listbox">
-								<div class="item active">
-									<img src="<?php bloginfo('template_directory'); ?>/images/GtrialSD1.jpg" alt="Vanguard Gtrial Starter Decks">
-									<!-- <div class="carousel-caption">
-										...
-									</div> -->
+								<!-- Start Slider -->
+								<?php if(get_field('home_page_banner')); ?>
+								<?php while(the_repeater_field('home_page_banner')) :
+									$image = get_sub_field('slider_image');
+									$caption = get_sub_field('slider_caption');
+									$slide = wp_get_attachment_image_src( $image, $caption, 'home_page_banner');
+									$alt = get_post_meta( $image, '_wp_attachment_image_alt', true);
+									$active = get_sub_field('active');
+								?>
+								<div class="item <?php if($active == 1){echo 'active';}; ?>">
+									<img src="<?php echo $slide[0]; ?>" alt="<?php echo $alt; ?>">
+									<div class="carousel-caption">
+										<?php echo $caption; ?>
+									</div>
 								</div>
+							<?php endwhile; ?>
 
 							<!-- Controls -->
 							<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -42,7 +66,7 @@ Template Name: Homepage
 
 
 				</div>
-
+				<!-- End Slider -->
 				<div id="main" class="col-sm-12 clearfix" role="main">
 
 
