@@ -59,6 +59,23 @@
 								<input name="s" id="s" type="text" class="search-query form-control" autocomplete="off" placeholder="<?php _e('Search','wpbootstrap'); ?>">
 							</div>
 						</form>
+						<ul class="nav navbar-nav navbar-right">
+							<li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contact <span class="caret"></span></a>
+			          <ul class="dropdown-menu contact-menu scrollable-menu" role="menu">
+			            <li>
+										<div>
+											<iframe height='522' allowTransparency='true' frameborder='0' scrolling='no' style='width:100%;border:none'  src='//www.formget.com/app/embed/form/sWLV-61578/i?w='>Your Contact </iframe>										</div>
+									</li>
+			          </ul>
+			        </li>
+			        <li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Buylist <span class="caret"></span></a>
+			          <ul class="dropdown-menu" role="menu">
+			            <li><a href="https://docs.google.com/spreadsheets/d/1OBCyliwDNUNPUY-hlwOnpC0DqvQaKDzt-NkoGezv6ns/edit?usp=sharing" target="_blank">Magic the Gathering</a></li>
+			          </ul>
+			        </li>
+			      </ul>
 						<?php //} ?>
 					</div>
 
