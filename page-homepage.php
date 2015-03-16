@@ -12,28 +12,8 @@ Template Name: Homepage
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 
 							<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-
-						<!-- Indicators -->
-
 							<!-- Wrapper for slides -->
 
-							<!-- <?php if( get_field('photo_slider')) : ?>
-					<?php while( the_repeater_field('photo_slider')) :
-						$image = get_sub_field('slider_image');
-						$caption = get_sub_field('slider_caption');
-						$align = get_sub_field('caption_align');
-						$slide = wp_get_attachment_image_src( $image, $caption, 'photo_slider' );
-						$alt = get_post_meta( $image, '_wp_attachment_image_alt', true);
-						?>
-						<ul>
-						<li class="item">
-							<img src="<?php echo $slide[0]; ?>" alt="<?php echo $alt; ?>" />
-							<h3 class="banner-caption <?php if( $align == "top left" ) { echo 'top-left'; } elseif( $align == "top right" ) { echo 'top-right'; } elseif( $align == "bottom left" ) { echo 'bottom-left'; } else { echo 'bottom-right'; }; ?>"><?php echo $caption; ?></h3>
-						</li>
-						</ul>
-						<?php endwhile; ?>
-
-				<?php endif; ?> -->
 				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 							<div class="carousel-inner" role="listbox">
 								<!-- Start Slider -->
@@ -91,7 +71,7 @@ Template Name: Homepage
 						</div>
 
 						<div class="col-sm-4 calendar-info info-block">
-							<img src="<?php bloginfo('template_directory'); ?>/images/calendar-icon.png" class="img-responsive center-block" alt="Shanes Big League Calendar"/>
+							<img src="<?php bloginfo('template_directory'); ?>/images/contact-icon.png" class="img-responsive center-block" alt="Shanes Big League Calendar"/>
 							<h3 class="text-center">Contact</h3>
 							<p class="info-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et</p>
 							<div class="col-md-12 text-center">
