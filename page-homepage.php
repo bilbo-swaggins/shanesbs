@@ -103,34 +103,30 @@ Template Name: Homepage
 					<!-- End Info -->
 					<h2>New Products</h2>
 
-					<div class="row new-products">
 
-						<div class="col-sm-6 col-md-4 first-product margin-bottom">
-							<div class="product">
-								<img src="<?php bloginfo('template_directory'); ?>/images/fate-thumb.png" alt="Magic the gathering Fate Reforged" class="img-responsive center-block" />
-								<div class="product-caption">
-									<a href="#">This is the caption</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6 col-md-4 margin-bottom">
-							<div class="product">
-								<img src="<?php bloginfo('template_directory'); ?>/images/yugioh-1-thumb.png" alt="Magic the gathering Fate Reforged" class="img-responsive center-block" />
-								<div class="product-caption">
-									<a href="#">This is the caption</a>
-								</div>
-							</div>
-						</div>
-						<div class="clearfix visible-sm-block"></div>
-						<div class="col-sm-6 col-md-4 margin-bottom">
-							<div class="product">
-								<img src="<?php bloginfo('template_directory'); ?>/images/vanguard-1-thumb.png" alt="Magic the gathering Fate Reforged" class="img-responsive center-block" />
-								<div class="product-caption">
-									<a href="#">This is the caption</a>
-								</div>
-							</div>
-						</div>
-					</div>
+										<?php
+				          	$args = array(
+								            'post_type' => 'products',
+								            'posts_per_page' => 3,
+								            'orderby' => 'date',
+								            'order' => 'DESC'
+
+										);
+										$loop = new WP_Query( $args );
+										$i = 0;
+										while ( $loop->have_posts() ) : $loop->the_post(); $i++;
+										?>
+
+										<div class="col-sm-6 col-md-4 margin-bottom">
+											<div class="product">
+												<?php echo get_the_post_thumbnail( $post->ID, 'medium', array( 'class' => 'img-responsive center-block' ) ); ?>
+												<div class="product-caption">
+													<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+												</div>
+											</div>
+										</div>
+										<?php if($i==2){echo '<div class="clearfix visible-sm-block"></div>';}; ?>
+										<?php endwhile; ?>
 					<!-- End New Products -->
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 

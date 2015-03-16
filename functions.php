@@ -702,4 +702,31 @@ function wp_bootstrap_filter_ptags_on_images( $content ){
 }
 add_filter( 'the_content', 'wp_bootstrap_filter_ptags_on_images' );
 
+// Custom Post Types
+
+function post_type_products() {
+	// register post type
+    $postTypeArgs = array(
+		'label'  => 'Products',
+		'public' => true,
+		'rewrite' => array("slug" => "products"),
+		'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes','excerpt' ),
+    );
+    register_post_type( 'products', $postTypeArgs );
+    // Register taxonomy
+  	$taxArgs = array(
+  		'label'                         => 'Categories',
+  		'public'                        => true,
+  		'hierarchical'                  => true,
+  		'show_ui'                       => true,
+  		'show_in_nav_menus'             => true,
+  		'args'                          => array( 'orderby' => 'term_order' ),
+  		'query_var'                     => true
+  	);
+  	register_taxonomy( 'project_categories', 'products', $taxArgs );
+}
+add_action( 'init', 'post_type_products' );
+
+
+
 ?>
