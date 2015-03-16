@@ -82,8 +82,6 @@ Template Name: Homepage
 					</div>
 					<!-- End Info -->
 					<h2>New Products</h2>
-
-
 										<?php
 				          	$args = array(
 								            'post_type' => 'products',
