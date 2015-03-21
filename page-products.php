@@ -46,86 +46,155 @@ Template Name: Products
 
 				</div> <!-- end #main -->
 
-				<div class="row">
-					<div class="col-sm-6 col-md-4">
+				<div class="row prod">
+					<div class="col-sm-6 col-md-4 product-item">
 						<img src="<?php bloginfo('template_directory'); ?>/images/magic.png" alt="Magic the Gathering Products" class="img-responsive margin-bottom">
+
 						<ul>
-							<li><a href="#">Khans of Tarkir</a></li>
-							<li><a href="#">Dragons of Tarkir</a></li>
-							<li><a href="#">Fate Reforged</a></li>
-							<li><a href="#">Commander 2014</a></li>
+						<?php
+                $args = array(
+                    'post_type' => 'products',
+                    'posts_per_page' => 10,
+                    'orderby' => 'date',
+                    'order' => 'DESC',
+										'tax_query' => array(
+											array(
+												'taxonomy' => 'products_categories',
+												'field' => 'slug',
+												'terms' => array('magic'),
+												'include_children' => false
+											)
+										)
+									);
+								 $loop = new WP_Query( $args );
+                while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                <?php endwhile; ?>
 						</ul>
 					</div>
 					<div class="col-sm-6 col-md-4">
 						<img src="<?php bloginfo('template_directory'); ?>/images/yugioh.png" alt="Magic the Gathering Products" class="img-responsive margin-bottom">
 						<ul>
-							<li><a href="#">Khans of Tarkir</a></li>
-							<li><a href="#">Dragons of Tarkir</a></li>
-							<li><a href="#">Fate Reforged</a></li>
-							<li><a href="#">Commander 2014</a></li>
-							<li><a href="#">Commander 2014</a></li>
-							<li><a href="#">Commander 2014</a></li>
-							<li><a href="#">Commander 2014</a></li>
+							<?php
+									$args = array(
+											'post_type' => 'products',
+											'posts_per_page' => 10,
+											'orderby' => 'date',
+											'order' => 'DESC',
+											'tax_query' => array(
+												array(
+													'taxonomy' => 'products_categories',
+													'field' => 'slug',
+													'terms' => array('yugioh'),
+													'include_children' => false
+												)
+											)
+										);
+									$loop = new WP_Query( $args );
+									while ( $loop->have_posts() ) : $loop->the_post(); ?>
+													<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+									<?php endwhile; ?>
+
 						</ul>
 					</div>
 					<div class="col-sm-6 col-md-4">
 						<img src="<?php bloginfo('template_directory'); ?>/images/vanguard.png" alt="Magic the Gathering Products" class="img-responsive margin-bottom">
 						<ul>
-							<li><a href="#">Khans of Tarkir</a></li>
-							<li><a href="#">Dragons of Tarkir</a></li>
-							<li><a href="#">Fate Reforged</a></li>
-							<li><a href="#">Commander 2014</a></li>
-							<li><a href="#">Commander 2014</a></li>
-							<li><a href="#">Commander 2014</a></li>
-							<li><a href="#">Commander 2014</a></li>
-							<li><a href="#">Commander 2014</a></li>
-							<li><a href="#">Commander 2014</a></li>
-							<li><a href="#">Commander 2014</a></li>
+							<?php
+									$args = array(
+											'post_type' => 'products',
+											'posts_per_page' => 10,
+											'orderby' => 'date',
+											'order' => 'DESC',
+											'tax_query' => array(
+												array(
+													'taxonomy' => 'products_categories',
+													'field' => 'slug',
+													'terms' => array('vanguard'),
+													'include_children' => false
+												)
+											)
+										);
+									$loop = new WP_Query( $args );
+									while ( $loop->have_posts() ) : $loop->the_post(); ?>
+													<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+									<?php endwhile; ?>
+
 						</ul>
 					</div>
 					<div class="col-sm-6 col-md-4">
 						<img src="<?php bloginfo('template_directory'); ?>/images/pokemon.png" alt="Magic the Gathering Products" class="img-responsive margin-bottom">
 						<ul>
-							<li><a href="#">Khans of Tarkir</a></li>
-							<li><a href="#">Dragons of Tarkir</a></li>
-							<li><a href="#">Fate Reforged</a></li>
-							<li><a href="#">Commander 2014</a></li>
-							<li><a href="#">Commander 2014</a></li>
-							<li><a href="#">Commander 2014</a></li>
-							<li><a href="#">Commander 2014</a></li>
-							<li><a href="#">Commander 2014</a></li>
-							<li><a href="#">Commander 2014</a></li>
-							<li><a href="#">Commander 2014</a></li>
+							<?php
+									$args = array(
+											'post_type' => 'products',
+											'posts_per_page' => 10,
+											'orderby' => 'date',
+											'order' => 'DESC',
+											'tax_query' => array(
+												array(
+													'taxonomy' => 'products_categories',
+													'field' => 'slug',
+													'terms' => array('pokemon'),
+													'include_children' => false
+												)
+											)
+										);
+									$loop = new WP_Query( $args );
+									while ( $loop->have_posts() ) : $loop->the_post(); ?>
+													<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+									<?php endwhile; ?>
+
 						</ul>
 					</div>
 					<div class="col-sm-6 col-md-4">
 						<img src="<?php bloginfo('template_directory'); ?>/images/bgs.png" alt="Magic the Gathering Products" class="img-responsive margin-bottom">
 						<ul>
-							<li><a href="#">Khans of Tarkir</a></li>
-							<li><a href="#">Dragons of Tarkir</a></li>
-							<li><a href="#">Fate Reforged</a></li>
-							<li><a href="#">Commander 2014</a></li>
-							<li><a href="#">Commander 2014</a></li>
-							<li><a href="#">Commander 2014</a></li>
-							<li><a href="#">Commander 2014</a></li>
-							<li><a href="#">Commander 2014</a></li>
-							<li><a href="#">Commander 2014</a></li>
-							<li><a href="#">Commander 2014</a></li>
+							<?php
+									$args = array(
+											'post_type' => 'products',
+											'posts_per_page' => 10,
+											'orderby' => 'date',
+											'order' => 'DESC',
+											'tax_query' => array(
+												array(
+													'taxonomy' => 'products_categories',
+													'field' => 'slug',
+													'terms' => array('bg'),
+													'include_children' => false
+												)
+											)
+										);
+									$loop = new WP_Query( $args );
+									while ( $loop->have_posts() ) : $loop->the_post(); ?>
+													<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+									<?php endwhile; ?>
+
 						</ul>
 					</div>
 					<div class="col-sm-6 col-md-4">
 						<img src="<?php bloginfo('template_directory'); ?>/images/gs.png" alt="Magic the Gathering Products" class="img-responsive margin-bottom">
 						<ul>
-							<li><a href="#">Khans of Tarkir</a></li>
-							<li><a href="#">Dragons of Tarkir</a></li>
-							<li><a href="#">Fate Reforged</a></li>
-							<li><a href="#">Commander 2014</a></li>
-							<li><a href="#">Commander 2014</a></li>
-							<li><a href="#">Commander 2014</a></li>
-							<li><a href="#">Commander 2014</a></li>
-							<li><a href="#">Commander 2014</a></li>
-							<li><a href="#">Commander 2014</a></li>
-							<li><a href="#">Commander 2014</a></li>
+							<?php
+									$args = array(
+											'post_type' => 'products',
+											'posts_per_page' => 10,
+											'orderby' => 'date',
+											'order' => 'DESC',
+											'tax_query' => array(
+												array(
+													'taxonomy' => 'products_categories',
+													'field' => 'slug',
+													'terms' => array('gs'),
+													'include_children' => false
+												)
+											)
+										);
+									$loop = new WP_Query( $args );
+									while ( $loop->have_posts() ) : $loop->the_post(); ?>
+													<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+									<?php endwhile; ?>
+
 						</ul>
 					</div>
 

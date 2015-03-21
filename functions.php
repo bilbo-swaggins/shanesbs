@@ -723,7 +723,7 @@ function post_type_products() {
   		'args'                          => array( 'orderby' => 'term_order' ),
   		'query_var'                     => true
   	);
-  	register_taxonomy( 'project_categories', 'products', $taxArgs );
+  	register_taxonomy( 'products_categories', 'products', $taxArgs );
 }
 add_action( 'init', 'post_type_products' );
 
