@@ -1,4 +1,14 @@
+<?php
+
+/*
+Single Post Template: Products
+Description: Single Template for Products
+
+*/
+?>
+
 <?php get_header(); ?>
+
 
 			<div id="content" class="clearfix row">
 

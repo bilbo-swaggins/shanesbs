@@ -727,6 +727,27 @@ function post_type_products() {
 }
 add_action( 'init', 'post_type_products' );
 
+//seo title
+function get_title() {
+  global $post;
+  if ( is_singular('products')) {
+    echo 'Products';
+    echo ' | ';
+  }
+  if ( is_home() || is_archive() || is_front_page() ) {
+    bloginfo('description'); //Grabs Tagline from wordpress profile in dashboard
+  }
+  elseif ( is_page () || is_single() ) {
+    the_title(); //Grab the title for the post
+  }
+
+  echo ' | ';
+  bloginfo('name');//Grab site title
+  echo ' | ';
+  echo 'Renton WA, United States';//State and country
+}//end title function
 
 
+//Add Excertp
+add_post_type_support('page', 'excerpt' );
 ?>
