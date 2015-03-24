@@ -46,7 +46,8 @@ Template Name: Products
 
 				</div> <!-- end #main -->
 
-				<div class="row prod">
+				<section class="row products">
+
 					<div class="col-sm-6 col-md-4 product-item">
 						<img src="<?php bloginfo('template_directory'); ?>/images/magic.png" alt="Magic the Gathering Products" class="img-responsive margin-bottom">
 
@@ -73,7 +74,7 @@ Template Name: Products
 						</ul>
 					</div>
 					<div class="col-sm-6 col-md-4">
-						<img src="<?php bloginfo('template_directory'); ?>/images/yugioh.png" alt="Magic the Gathering Products" class="img-responsive margin-bottom">
+						<img src="<?php bloginfo('template_directory'); ?>/images/yugioh.png" alt="Yugioh Trading Cards" class="img-responsive margin-bottom">
 						<ul>
 							<?php
 									$args = array(
@@ -98,7 +99,7 @@ Template Name: Products
 						</ul>
 					</div>
 					<div class="col-sm-6 col-md-4">
-						<img src="<?php bloginfo('template_directory'); ?>/images/vanguard.png" alt="Magic the Gathering Products" class="img-responsive margin-bottom">
+						<img src="<?php bloginfo('template_directory'); ?>/images/vanguard.png" alt="Vanguard Trading Cards" class="img-responsive margin-bottom">
 						<ul>
 							<?php
 									$args = array(
@@ -123,7 +124,7 @@ Template Name: Products
 						</ul>
 					</div>
 					<div class="col-sm-6 col-md-4">
-						<img src="<?php bloginfo('template_directory'); ?>/images/pokemon.png" alt="Magic the Gathering Products" class="img-responsive margin-bottom">
+						<img src="<?php bloginfo('template_directory'); ?>/images/pokemon.png" alt="Pokemon Trading Cards" class="img-responsive margin-bottom">
 						<ul>
 							<?php
 									$args = array(
@@ -148,7 +149,32 @@ Template Name: Products
 						</ul>
 					</div>
 					<div class="col-sm-6 col-md-4">
-						<img src="<?php bloginfo('template_directory'); ?>/images/bgs.png" alt="Magic the Gathering Products" class="img-responsive margin-bottom">
+						<img src="<?php bloginfo('template_directory'); ?>/images/sports.png" alt="Sports Cards and Collectables" class="img-responsive margin-bottom">
+						<ul>
+							<?php
+									$args = array(
+											'post_type' => 'products',
+											'posts_per_page' => 10,
+											'orderby' => 'date',
+											'order' => 'DESC',
+											'tax_query' => array(
+												array(
+													'taxonomy' => 'products_categories',
+													'field' => 'slug',
+													'terms' => array('sports'),
+													'include_children' => false
+												)
+											)
+										);
+									$loop = new WP_Query( $args );
+									while ( $loop->have_posts() ) : $loop->the_post(); ?>
+													<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+									<?php endwhile; ?>
+
+						</ul>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<img src="<?php bloginfo('template_directory'); ?>/images/bgs.png" alt="Board Games" class="img-responsive margin-bottom">
 						<ul>
 							<?php
 									$args = array(
@@ -173,7 +199,7 @@ Template Name: Products
 						</ul>
 					</div>
 					<div class="col-sm-6 col-md-4">
-						<img src="<?php bloginfo('template_directory'); ?>/images/gs.png" alt="Magic the Gathering Products" class="img-responsive margin-bottom">
+						<img src="<?php bloginfo('template_directory'); ?>/images/gs.png" alt="Gaming Supplies" class="img-responsive margin-bottom">
 						<ul>
 							<?php
 									$args = array(
@@ -198,7 +224,8 @@ Template Name: Products
 						</ul>
 					</div>
 
-				</div> <!-- end products row -->
+				</section>
+				<!-- End Product Row -->
 			</div> <!-- end #content -->
 
 <?php get_footer(); ?>

@@ -43,18 +43,18 @@ module.exports = function(grunt) {
         }
       }
     },
-    grunticon: {
-      myIcons: {
-          files: [{
-              expand: true,
-              cwd: 'library/img',
-              src: ['*.svg', '*.png'],
-              dest: "library/img"
-          }],
-          options: {
-          }
-      }
-    },
+    // grunticon: {
+    //   myIcons: {
+    //       files: [{
+    //           expand: true,
+    //           cwd: 'library/img',
+    //           src: ['*.svg', '*.png'],
+    //           dest: "library/img"
+    //       }],
+    //       options: {
+    //       }
+    //   }
+    // },
     version: {
       assets: {
         files: {
@@ -106,7 +106,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-wp-assets');
-  grunt.loadNpmTasks('grunt-grunticon');
+  // grunt.loadNpmTasks('grunt-grunticon');
   grunt.loadNpmTasks('grunt-svgstore');
 
   // Register tasks
@@ -114,7 +114,7 @@ module.exports = function(grunt) {
     'clean',
     'less',
     'uglify',
-    'grunticon',
+    // 'grunticon',
     'version'
   ]);
 
@@ -122,12 +122,12 @@ module.exports = function(grunt) {
     'clean:dist',
     'less',
     'uglify',
-    'grunticon',
+    // 'grunticon',
     'version'
   ]);
 
   grunt.registerTask('dev', [
-    'grunticon',
+    // 'grunticon',
     'watch'
   ]);
 
