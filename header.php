@@ -15,7 +15,7 @@
   		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 			<!-- Fonts -->
 			<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
-			
+
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
 		<!-- end of wordpress head -->

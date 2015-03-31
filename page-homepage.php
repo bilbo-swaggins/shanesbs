@@ -58,28 +58,47 @@ Template Name: Homepage
 						<div class="col-sm-4 calendar-info info-block">
 							<img src="<?php bloginfo('template_directory'); ?>/images/Calendar-icon.png" class="img-responsive center-block" alt="Shanes Big League Calendar"/>
 							<h3 class="text-center">Calendar</h3>
-							<p class="info-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et</p>
+							<p class="info-text">
+							<?php
+
+								$pageCalendar = get_page_by_title('Calendar');
+								echo $pageCalendar->post_excerpt;
+
+							?>
+
+							</p>
 								<div class="col-md-12 text-center">
-									<button id="singlebutton" name="singlebutton" class="btn btn-primary">Calendar</button>
+									<a  href="<?php echo get_page_link($pageCalendar); ?>" id="singlebutton" name="singlebutton" class="btn btn-primary">Calendar</a>
 								</div>
 							</div>
 
 						<div class="col-sm-4 products-info info-block">
 							<img src="<?php bloginfo('template_directory'); ?>/images/products-icon.png" class="img-responsive center-block" alt="Shanes Big League Calendar"/>
 							<h3 class="text-center">Products</h3>
-							<p class="info-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et</p>
+							<p class="info-text">
+							<?php
+
+								$pageProducts = get_page_by_title('Products');
+								echo $pageProducts->post_excerpt;
+
+							?>
+							</p>
 							<div class="col-md-12 text-center">
-								<button id="singlebutton" name="singlebutton" class="btn btn-primary">Products</button>
+								<a href="<?php echo get_page_link($pageProducts);?>" id="singlebutton" name="singlebutton" class="btn btn-primary">Products</a>
 							</div>
 						</div>
 
 						<div class="col-sm-4 calendar-info info-block">
 							<img src="<?php bloginfo('template_directory'); ?>/images/open-icon.png" class="img-responsive center-block" alt="Shanes Big League Calendar"/>
 							<h3 class="text-center">Store Details</h3>
-							<p class="info-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et</p>
-							<div class="col-md-12 text-center">
-								<button id="singlebutton" name="singlebutton" class="btn btn-primary">Contact</button>
-							</div>
+							<p class="info-text">
+							Hours: <br/>
+							Monday-Friday: 11-7 <br />
+							Saturday-Sunday: 10-6 <br />
+							<br />
+							Phone: (425) 277-3717
+
+							</p>
 						</div>
 
 					</div>

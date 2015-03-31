@@ -57,6 +57,7 @@ footer{
 footer p {
 	color:white;
 }
+
 .footer-links a:link, .footer-links a:visited{
 	color:white;
 }
@@ -71,15 +72,20 @@ footer h3 {
 .facebook-link img, .yelp-link img{
 	margin-bottom:20px;
 }
-.footer-links .menu{
-	list-style-type: none;
-	margin-left: 0;
-}
+.footer-links{
+		ul {
+			padding-left: 0;
+		}
+		.menu {
+			list-style-type: none;
+			margin-left: 0;
+			li {
+				float: left;
+				margin-left: 10px;
+			}
+		}
+	}
 
-.footer-links .menu li{
-	float: left;
-	margin-left: 10px;
-}
 .mtg-disclaimer{
 	font-size:10px;
 	padding-top:20px;
@@ -88,7 +94,7 @@ footer h3 {
 //Fix Logo in header
 
 .navbar-brand {
-	padding-top: 10px;
+	padding-top: 0;
 }
 
 // Main Page info blocks

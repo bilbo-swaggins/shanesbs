@@ -55,6 +55,7 @@
 							</div>
 						<div class="col-sm-4">
 							<nav class="clearfix footer-links">
+								<h3>Site Map</h3>
 								<?php wp_bootstrap_footer_links(); // Adjust using Menus in Wordpress Admin ?>
 							</nav>
 						</div>
@@ -73,8 +74,8 @@
 		<?php wp_footer(); // js scripts are inserted using this function ?>
 
 		<!-- remove this for production -->
-
 		<script src="//localhost:35729/livereload.js"></script>
+
 		<script>
 		$('.carousel').carousel({
         interval: 3000
