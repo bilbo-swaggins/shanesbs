@@ -49,7 +49,7 @@ Template Name: Homepage
 					<Section id="info" class="row">
 
 						<div class="col-sm-4 calendar-info info-block">
-							<img src="<?php bloginfo('template_directory'); ?>/images/Calendar-icon.png" class="img-responsive center-block" alt="Shanes Big League Calendar"/>
+							<img src="<?php bloginfo('template_directory'); ?>/images/calendar-icon.png" class="img-responsive center-block" alt="Shanes Big League Calendar"/>
 							<h3 class="text-center">Calendar</h3>
 							<p class="info-text">
 							<?php
