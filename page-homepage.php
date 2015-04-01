@@ -9,10 +9,6 @@ Template Name: Homepage
 			<div id="content" class="clearfix row">
 				<div class="banner col-sm-12 clearfix">
 
-
-					<div class="carousel slide" data-ride="carousel">
-							<!-- Wrapper for slides -->
-
 						<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 									<div class="carousel-inner" role="listbox">
 										<!-- Start Slider -->
@@ -45,9 +41,8 @@ Template Name: Homepage
 
 						</div>
 
-					</div>
-
 				</div>
+
 				<!-- End Slider -->
 				<div id="main" class="col-sm-12 clearfix" role="main">
 
