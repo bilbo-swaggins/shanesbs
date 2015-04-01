@@ -195,6 +195,7 @@ Template Name: Products
 									while ( $loop->have_posts() ) : $loop->the_post(); ?>
 													<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 									<?php endwhile; ?>
+									<li><a href="https://docs.google.com/spreadsheets/d/1JmfEMfoqWKjNYZqE-Mjvw1BeuSRYvzjbzo3dn6vjyiQ/edit?usp=sharing" target="_blank">More...</a></li>
 
 						</ul>
 					</div>

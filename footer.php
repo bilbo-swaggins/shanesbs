@@ -2,15 +2,18 @@
 		</div> <!-- end #container -->
 			<footer role="contentinfo" class="container-fluid">
 				<div class="container">
-					<div class="row clearfix">
+					<div class="row clearfix footer">
 						<div class="col-sm-4">
-						<a href="https://www.facebook.com/pages/Shanes-Big-League/142633815754059" target="_blank" class="facebook-link"><img src="<?php bloginfo('template_directory'); ?>/images/facebook-icon.png" alt="Facebook"></a>
-						<a href="http://www.yelp.com/biz/shanes-big-league-sports-cards-renton" target="_blank" class="yelp-link"><img src="<?php bloginfo('template_directory'); ?>/images/yelp-icon.png" alt="Yelp"></a>
+							<h3><span class="fa fa-home"></span> Find Us</h3>
+							<p><a href="https://goo.gl/maps/8MN07" target="_blank" class="maps">601 South Grady Way, Renton WA</a></p>
+							<p>Phone: (425) 277-3717</p>
+						<a href="https://www.facebook.com/pages/Shanes-Big-League/142633815754059" target="_blank" class="foot-icon"><span class="fa fa-facebook-square fa-3x"></span></a>
+						<a href="http://www.yelp.com/biz/shanes-big-league-sports-cards-renton" target="_blank" class="foot-icon"><span class="fa fa-yelp fa-3x"><span></a>
 						<p class="attribution">&copy; <?php bloginfo('name'); ?></p>
 						</div>
 
 						<div class="col-sm-4">
-							<h3>Mailing List</h3>
+							<h3><span class="fa fa-envelope"></span> Mailing List</h3>
 							<!-- Begin MailChimp Signup Form -->
 							<div id="mc_embed_signup" class="mail-list">
 								<form action="//shanescards.us9.list-manage.com/subscribe/post?u=909310b6a5e186a43789e18ef&amp;id=f24e3a21cf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -55,7 +58,7 @@
 							</div>
 						<div class="col-sm-4">
 							<nav class="clearfix footer-links">
-								<h3>Site Map</h3>
+								<h3><span class="fa fa-location-arrow"></span> Site Map</h3>
 								<?php wp_bootstrap_footer_links(); // Adjust using Menus in Wordpress Admin ?>
 							</nav>
 						</div>
@@ -74,7 +77,7 @@
 		<?php wp_footer(); // js scripts are inserted using this function ?>
 
 		<!-- remove this for production -->
-		<script src="//localhost:35729/livereload.js"></script>
+		<!-- <script src="//localhost:35729/livereload.js"></script> -->
 
 		<script>
 		$('.carousel').carousel({

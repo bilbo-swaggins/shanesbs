@@ -58,9 +58,16 @@ footer p {
 	color:white;
 }
 
-.footer-links a:link, .footer-links a:visited{
+.footer-links {
+	a:link, a:visited {
 	color:white;
+	text-decoration:underline;
+	}
+	a:hover, a:active {
+		text-decoration:none;
+	}
 }
+
 footer h3 {
 	margin-top:0;
 	color:white;
@@ -69,8 +76,10 @@ footer h3 {
 .yelp-link {
 	margin-left:20px;
 }
-.facebook-link img, .yelp-link img{
+.facebook-link , .yelp-link {
 	margin-bottom:20px;
+	width:50px;
+	height:50px;
 }
 .footer-links{
 		ul {
@@ -129,4 +138,25 @@ footer h3 {
 			}
 		}
     overflow-x: hidden;
+}
+.dropdown-menu li {
+	background-color:white;
+}
+
+// Footer
+
+.footer div {
+	margin-bottom:10px;
+}
+
+.maps:link , .maps:visited{
+	color:white;
+	text-decoration:underline;
+}
+.maps:hover, .maps:active{
+	text-decoration:none;
+}
+.foot-icon {
+	color:white;
+	margin:20px 5px;
 }

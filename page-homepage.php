@@ -9,7 +9,6 @@ Template Name: Homepage
 			<div id="content" class="clearfix row">
 				<div class="banner col-sm-12 clearfix">
 
-					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 
 					<div class="carousel slide" data-ride="carousel">
 							<!-- Wrapper for slides -->
@@ -52,8 +51,7 @@ Template Name: Homepage
 				<!-- End Slider -->
 				<div id="main" class="col-sm-12 clearfix" role="main">
 
-
-					<div id="info" class="row">
+					<Section id="info" class="row">
 
 						<div class="col-sm-4 calendar-info info-block">
 							<img src="<?php bloginfo('template_directory'); ?>/images/Calendar-icon.png" class="img-responsive center-block" alt="Shanes Big League Calendar"/>
@@ -101,9 +99,9 @@ Template Name: Homepage
 							</p>
 						</div>
 
-					</div>
+					</section>
 					<!-- End Info -->
-					<div class="row">
+					<section class="row">
 					<h2>New Products</h2>
 										<?php
 				          	$args = array(
@@ -129,9 +127,8 @@ Template Name: Homepage
 										<?php if($i==2){echo '<div class="clearfix visible-sm-block"></div>';}; ?>
 										<?php endwhile; ?>
 					<!-- End New Products -->
-				</div>
+				</section>
 
-					</article> <!-- end article -->
 
 
 				</div> <!-- end #main -->

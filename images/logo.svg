@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="89px" height="72px" viewBox="0 0 89 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>logo-5</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="42.8025717 0 73.5383376 17.4632904 73.5383376 52.3898711 42.8025717 69.8531615 12.0668058 52.3898711 12.0668058 17.4632904 "></polygon>
+        <path id="path-2" d="M0,5.82026433 C42.5,-7.27533041 85,5.82026433 85,5.82026433 C85,5.82026433 80.75,22.1402031 80.75,22.1402034 C39.1,9.53354622 4.25,22.1402034 4.25,22.1402034 C4.25,22.1402034 0,5.82026433 0,5.82026433 Z"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="logo-5" sketch:type="MSLayerGroup" transform="translate(2.000000, 1.000000)">
+            <g id="Polygon-2">
+                <use stroke="#FF5252" stroke-width="1.77482447" fill="#FF5252" fill-rule="evenodd" sketch:type="MSShapeGroup" xlink:href="#path-1"></use>
+                <use stroke="#FFFFFF" stroke-width="1.06489468" fill="none" xlink:href="#path-1"></use>
+            </g>
+            <text id="Shanes" sketch:type="MSTextLayer" font-family="Brush Script MT" font-size="18.6368434" font-style="italic" font-weight="normal" fill="#FFFFFF">
+                <tspan x="19.519833" y="29.9228349">Shanes</tspan>
+            </text>
+            <g id="banner" transform="translate(0.000000, 35.625112)">
+                <g id="Path-27">
+                    <use stroke="#1976D2" stroke-width="1.77482447" fill="#1976D2" fill-rule="evenodd" sketch:type="MSShapeGroup" xlink:href="#path-2"></use>
+                    <use stroke="#FFFFFF" stroke-width="1.06489468" fill="none" xlink:href="#path-2"></use>
+                </g>
+                <text id="Big-League" sketch:type="MSTextLayer" font-family="Brush Script MT" font-size="13.1479208" font-style="italic" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="18.1676409" y="13.1917325">Big League</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
